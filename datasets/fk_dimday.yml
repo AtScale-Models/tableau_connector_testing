@@ -1,0 +1,12 @@
+unique_name: fk_dimday
+object_type: dataset
+label: fk_dimday
+columns:
+  - name: dayid
+    data_type: int
+  - name: dayno
+    data_type: int
+  - name: monthid
+    data_type: int
+connection_id: Connection - Tableau Testing
+table: fk_dimday

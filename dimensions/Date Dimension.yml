@@ -1,0 +1,19 @@
+unique_name: Date Dimension
+object_type: dimension
+label: Date Dimension
+hierarchies:
+  - unique_name: Day Hierarchy
+    label: Day Hierarchy
+    levels:
+      - unique_name: Day
+level_attributes:
+  - unique_name: Day
+    label: Day
+    contains_unique_names: false
+    dataset: fk_dimday
+    is_unique_key: true
+    key_columns:
+      - dayid
+    name_column: dayno
+    sort_column: dayid
+type: standard

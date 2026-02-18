@@ -30,3 +30,11 @@ relationships:
     to:
       dimension: Product Dimension
       level: Product
+  - unique_name: fk_orderfact_dayid_to_Date Dimension_Day
+    from:
+      dataset: fk_orderfact
+      join_columns:
+        - dayid
+    to:
+      dimension: Date Dimension
+      level: Day
