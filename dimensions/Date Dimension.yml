@@ -5,6 +5,8 @@ hierarchies:
   - unique_name: Day Hierarchy
     label: Day Hierarchy
     levels:
+      - unique_name: Year
+      - unique_name: Month
       - unique_name: Day
 level_attributes:
   - unique_name: Day
@@ -16,4 +18,35 @@ level_attributes:
       - dayid
     name_column: dayno
     sort_column: dayid
+  - unique_name: Month
+    label: Month
+    contains_unique_names: false
+    dataset: fk_dimmonth
+    is_unique_key: true
+    key_columns:
+      - monthid
+    name_column: monthno
+  - unique_name: Year
+    label: Year
+    contains_unique_names: false
+    dataset: fk_dimyear
+    is_unique_key: true
+    key_columns:
+      - yearid
+    name_column: yearid
+relationships:
+  - from:
+      dataset: fk_dimday
+      join_columns:
+        - monthid
+    to:
+      level: Month
+    type: snowflake
+  - from:
+      dataset: fk_dimmonth
+      join_columns:
+        - yearid
+    to:
+      level: Year
+    type: snowflake
 type: standard

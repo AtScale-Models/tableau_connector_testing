@@ -1,0 +1,8 @@
+unique_name: fk_dimyear
+object_type: dataset
+label: fk_dimyear
+columns:
+  - name: yearid
+    data_type: int
+connection_id: Connection - Tableau Testing
+table: fk_dimyear

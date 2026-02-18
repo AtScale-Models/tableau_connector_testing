@@ -24,6 +24,7 @@ relationships:
       join_columns:
         - cityid
       level: Customer Name
+    role_play: Customer {0}
     to:
       dimension: Geography
       level: City

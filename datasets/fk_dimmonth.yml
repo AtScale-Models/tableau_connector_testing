@@ -1,0 +1,12 @@
+unique_name: fk_dimmonth
+object_type: dataset
+label: fk_dimmonth
+columns:
+  - name: monthid
+    data_type: int
+  - name: monthno
+    data_type: int
+  - name: yearid
+    data_type: int
+connection_id: Connection - Tableau Testing
+table: fk_dimmonth
