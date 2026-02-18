@@ -1,0 +1,16 @@
+unique_name: fk_dimcustomer
+object_type: dataset
+label: fk_dimcustomer
+columns:
+  - name: customerid
+    data_type: int
+  - name: customername
+    data_type: string
+  - name: cityid
+    data_type: int
+  - name: zipcode
+    data_type: string
+  - name: customersegmentid
+    data_type: int
+connection_id: Connection - Tableau Testing
+table: fk_dimcustomer

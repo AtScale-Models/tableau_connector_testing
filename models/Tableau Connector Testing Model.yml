@@ -11,4 +11,14 @@ metrics:
     folder: Sales Metrics
   - unique_name: Discount
     folder: Sales Metrics
-relationships: []
+  - unique_name: Shipping Cost
+    folder: Shipping Metrics
+relationships:
+  - unique_name: fk_dimcustomer_dimension_Customer_Name
+    from:
+      dataset: fk_orderfact
+      join_columns:
+        - customerid
+    to:
+      dimension: fk_dimcustomer_dimension
+      level: Customer Name

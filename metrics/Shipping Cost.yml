@@ -1,0 +1,6 @@
+unique_name: Shipping Cost
+object_type: metric
+label: Shipping Cost
+calculation_method: sum
+column: shippingcost
+dataset: fk_orderfact

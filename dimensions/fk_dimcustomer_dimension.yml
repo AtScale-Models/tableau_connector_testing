@@ -1,0 +1,19 @@
+unique_name: fk_dimcustomer_dimension
+object_type: dimension
+label: Customer
+hierarchies:
+  - unique_name: Customer Hierarchy
+    label: Customer Hierarchy
+    levels:
+      - unique_name: Customer Name
+level_attributes:
+  - unique_name: Customer Name
+    label: Customer
+    contains_unique_names: false
+    dataset: fk_dimcustomer
+    is_unique_key: true
+    key_columns:
+      - customerid
+    name_column: customername
+    sort_column: customername
+type: standard
