@@ -1,0 +1,24 @@
+unique_name: fk_orderfact
+object_type: dataset
+label: fk_orderfact
+columns:
+  - name: orderid
+    data_type: int
+  - name: customerid
+    data_type: int
+  - name: productid
+    data_type: int
+  - name: dayid
+    data_type: int
+  - name: orderquantity
+    data_type: int
+  - name: sales
+    data_type: float
+  - name: profit
+    data_type: float
+  - name: discount
+    data_type: float
+  - name: shippingcost
+    data_type: float
+connection_id: Connection - Tableau Testing
+table: fk_orderfact

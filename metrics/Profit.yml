@@ -1,0 +1,6 @@
+unique_name: Profit
+object_type: metric
+label: Profit
+calculation_method: sum
+column: profit
+dataset: fk_orderfact
