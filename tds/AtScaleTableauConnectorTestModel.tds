@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<datasource xmlns:user="http://www.tableausoftware.com/xml/user" version="18.1" inline="true" formatted-name="Tableau Connector Testing Model">
+  <!-- Cube is member of schema "Tableau Connector Testing" with content hash 4b29d2b748c0a9072923ec338cb847c40efc1b23 -->
+  <!-- Cube is member of schema "Tableau Connector Testing" with content hash 4b29d2b748c0a9072923ec338cb847c40efc1b23 -->
+  <connection class="federated">
+    <named-connections>
+      <named-connection name="AtScale">
+        <connection one-time-sql="" class="postgres" sslmode="require" port="15432" authentication="auth-user-pass" dbname="Tableau Connector Testing" authentication-type="3" username="" server="partners.cloud.atscale.com">
+          <connection-customization version="18.1" enabled="true" class="postgres">
+            <vendor name="postgres"/>
+            <driver name="postgres"/>
+            <customizations>
+              <customization name="CAP_STORED_PROCEDURE_PREFER_TEMP_TABLE" value="no"/>
+              <customization name="CAP_QUERY_HAVING_REQUIRES_GROUP_BY" value="yes"/>
+              <customization name="CAP_ODBC_USE_NATIVE_PROTOCOL" value="yes"/>
+              <customization name="CAP_SELECT_INTO" value="no"/>
+              <customization name="CAP_QUERY_RECOMPILE_FAILED_QUERY" value="no"/>
+              <customization name="CAP_CREATE_TEMP_TABLES" value="no"/>
+              <customization name="CAP_QUERY_GROUP_BY_DEGREE" value="yes"/>
+              <customization name="CAP_FAST_METADATA" value="no"/>
+              <customization name="CAP_QUERY_TOP_0_METADATA" value="yes"/>
+              <customization name="CAP_QUERY_HAVING_UNSUPPORTED" value="no"/>
+              <customization name="CAP_QUERY_INCLUDE_GROUP_BY_COLUMNS_IN_SELECT" value="yes"/>
+              <customization name="CAP_JDBC_QUERY_FORCE_PREPARE" value="no"/>
+              <customization name="CAP_QUERY_SORT_BY_DEGREE" value="yes"/>
+              <customization name="CAP_QUERY_GROUP_BY_ALIAS" value="no"/>
+              <customization name="CAP_SUPPRESS_DISCOVERY_QUERIES" value="no"/>
+              <customization name="CAP_QUERY_TOPSTYLE_TOP" value="no"/>
+              <customization name="CAP_QUERY_TOPSTYLE_LIMIT" value="yes"/>
+              <customization name="CAP_QUERY_BOOLEXPR_TO_INTEXPR" value="no"/>
+              <customization name="CAP_QUERY_SELECT_ALIASES_SORTED" value="no"/>
+              <customization name="CAP_CONNECT_STORED_PROCEDURE" value="no"/>
+              <customization name="CAP_QUERY_TOPSTYLE_ROWNUM" value="no"/>
+              <customization name="CAP_JDBC_METADATA_USE_RESULTSET_FOR_TABLE" value="no"/>
+            </customizations>
+          </connection-customization>
+        </connection>
+      </named-connection>
+    </named-connections>
+    <relation connection="AtScale" name="Tableau Connector Testing Model" table="[Tableau Connector Testing].[Tableau Connector Testing Model]" type="table"/>
+  </connection>
+  <column type="nominal" datatype="string" caption="Customer City" role="dimension" name="[Customer City]"></column>
+  <column type="nominal" datatype="string" caption="Customer Name" role="dimension" name="[Customer Name]"></column>
+  <column type="nominal" datatype="string" caption="Customer Region" role="dimension" name="[Customer Region]"></column>
+  <column type="nominal" datatype="string" caption="Customer State" role="dimension" name="[Customer State]"></column>
+  <column type="ordinal" datatype="integer" caption="Day" role="dimension" name="[Day]"></column>
+  <column type="ordinal" datatype="integer" caption="Month" role="dimension" name="[Month]"></column>
+  <column type="nominal" datatype="string" caption="Product" role="dimension" name="[Product]"></column>
+  <column type="nominal" datatype="string" caption="Product Category" role="dimension" name="[Product Category]"></column>
+  <column type="nominal" datatype="string" caption="Product Subcategory" role="dimension" name="[Product Subcategory]"></column>
+  <column type="ordinal" datatype="integer" caption="Year" role="dimension" name="[Year]"></column>
+  <column default-format="n$#,##0.00" aggregation="Sum" type="quantitative" datatype="real" caption="Discount" role="measure" name="[Discount]"></column>
+  <column default-format="n#,##0" aggregation="Sum" type="quantitative" datatype="integer" caption="Order Quantity" role="measure" name="[Order Quantity]"></column>
+  <column default-format="n$#,##0.00" aggregation="Sum" type="quantitative" datatype="real" caption="Profit" role="measure" name="[Profit]"></column>
+  <column default-format="n$#,##0.00" aggregation="Sum" type="quantitative" datatype="real" caption="Sales" role="measure" name="[Sales]"></column>
+  <column default-format="n$#,##0.00" aggregation="Sum" type="quantitative" datatype="real" caption="Shipping Cost" role="measure" name="[Shipping Cost]"></column>
+  <drill-paths>
+    <drill-path name="Customer Geography Hierarchy">
+      <field>[Customer Region]</field>
+      <field>[Customer State]</field>
+      <field>[Customer City]</field>
+    </drill-path>
+    <drill-path name="Date Hierarchy">
+      <field>[Year]</field>
+      <field>[Month]</field>
+      <field>[Day]</field>
+    </drill-path>
+    <drill-path name="Product Hierarchy">
+      <field>[Product Category]</field>
+      <field>[Product Subcategory]</field>
+      <field>[Product]</field>
+    </drill-path>
+  </drill-paths>
+  <folder role="measures" name="Sales Metrics">
+    <folder-item name="[Sales]" type="field"/>
+    <folder-item name="[Discount]" type="field"/>
+    <folder-item name="[Profit]" type="field"/>
+    <folder-item name="[Shipping Cost]" type="field"/>
+    <folder-item name="[Order Quantity]" type="field"/>
+  </folder>
+  <layout dim-ordering="alphabetic" dim-percentage="0.5" measure-ordering="alphabetic" measure-percentage="0.4" show-structure="false"/>
+</datasource>
