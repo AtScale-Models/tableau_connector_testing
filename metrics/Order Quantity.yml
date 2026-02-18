@@ -4,3 +4,4 @@ label: Order Quantity
 calculation_method: sum
 column: orderquantity
 dataset: fk_orderfact
+format: '#,##0'

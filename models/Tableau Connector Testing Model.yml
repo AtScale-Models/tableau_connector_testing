@@ -12,7 +12,7 @@ metrics:
   - unique_name: Discount
     folder: Sales Metrics
   - unique_name: Shipping Cost
-    folder: Shipping Metrics
+    folder: Sales Metrics
 relationships:
   - unique_name: fk_dimcustomer_dimension_Customer_Name
     from:

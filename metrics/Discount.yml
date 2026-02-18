@@ -4,3 +4,4 @@ label: Discount
 calculation_method: sum
 column: discount
 dataset: fk_orderfact
+format: $#,##0.00

@@ -1,6 +1,6 @@
 unique_name: Customer Dimension
 object_type: dimension
-label: Customer
+label: Customer Name
 hierarchies:
   - unique_name: Customer Hierarchy
     label: Customer Hierarchy

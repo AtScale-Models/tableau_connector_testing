@@ -4,3 +4,4 @@ label: Sales
 calculation_method: sum
 column: sales
 dataset: fk_orderfact
+format: $#,##0.00

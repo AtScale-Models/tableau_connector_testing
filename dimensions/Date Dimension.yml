@@ -2,8 +2,8 @@ unique_name: Date Dimension
 object_type: dimension
 label: Date Dimension
 hierarchies:
-  - unique_name: Day Hierarchy
-    label: Day Hierarchy
+  - unique_name: Date Hierarchy
+    label: Date Hierarchy
     levels:
       - unique_name: Year
       - unique_name: Month

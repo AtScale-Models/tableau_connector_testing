@@ -4,3 +4,4 @@ label: Shipping Cost
 calculation_method: sum
 column: shippingcost
 dataset: fk_orderfact
+format: $#,##0.00

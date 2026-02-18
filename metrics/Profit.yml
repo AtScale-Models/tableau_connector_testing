@@ -4,3 +4,4 @@ label: Profit
 calculation_method: sum
 column: profit
 dataset: fk_orderfact
+format: $#,##0.00
