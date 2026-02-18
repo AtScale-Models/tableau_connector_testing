@@ -1,0 +1,12 @@
+unique_name: fk_dimproductsubcategory
+object_type: dataset
+label: fk_dimproductsubcategory
+columns:
+  - name: subcategoryid
+    data_type: int
+  - name: subcategoryname
+    data_type: string
+  - name: categoryid
+    data_type: int
+connection_id: Connection - Tableau Testing
+table: fk_dimproductsubcategory
