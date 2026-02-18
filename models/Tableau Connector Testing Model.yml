@@ -1,6 +1,7 @@
-unique_name: AdventureWorks2012
+unique_name: Tableau Connector Testing Model
 object_type: model
-label: AdventureWorks2012
+label: Tableau Connector Testing Model
+description: This is a model based on Adventureworks for Tableau connector t
 dimensions:
   - Internet Sales Order Details
 drillthroughs:

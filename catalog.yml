@@ -1,5 +1,6 @@
-unique_name: AdventureWorksDW2012
-label: AdventureWorksDW2012
+unique_name: Tableau Connector Testing
+label: Tableau Connector Testing Catalog
+description: Tableau Connector Testing
 object_type: catalog
 version: 1.0
 aggressive_agg_promotion: false

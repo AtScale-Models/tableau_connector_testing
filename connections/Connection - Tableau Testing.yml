@@ -1,0 +1,6 @@
+unique_name: Connection - Tableau Testing
+label: Connection - Tableau Testing
+object_type: connection
+as_connection: Databricks-Tableau-Testing
+database: tableau_testing
+schema: test_special
