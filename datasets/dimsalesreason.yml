@@ -1,0 +1,15 @@
+unique_name: Sales Reason Dataset
+object_type: dataset
+label: Sales Reason
+connection_id: Connection - AdventureWorks2012
+table: dimsalesreason
+
+columns:
+  - name: salesreasonalternatekey
+    data_type: "long"
+  - name: salesreasonkey
+    data_type: "long"
+  - name: salesreasonname
+    data_type: string
+  - name: salesreasonreasontype
+    data_type: string

@@ -1,0 +1,23 @@
+unique_name: Finance Facts
+object_type: dataset
+label: Finance Facts
+connection_id: Connection - AdventureWorks2012
+table: factfinance
+
+columns:
+  - name: accountkey
+    data_type: "long"
+  - name: amount
+    data_type: double
+  - name: date
+    data_type: string
+  - name: datekey
+    data_type: "long"
+  - name: departmentgroupkey
+    data_type: "long"
+  - name: financekey
+    data_type: "long"
+  - name: organizationkey
+    data_type: "long"
+  - name: scenariokey
+    data_type: "long"

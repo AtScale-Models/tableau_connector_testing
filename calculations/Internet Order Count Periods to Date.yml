@@ -1,0 +1,8 @@
+unique_name: Internet Order Count Periods to Date
+object_type: metric_calc
+label: Internet Order Count Periods to Date
+expression: |-
+  Sum(
+      PeriodsToDate([Date Custom].[StandardMonth].[Year]),
+      [Measures].[Internet Order Count]
+    )

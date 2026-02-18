@@ -1,0 +1,27 @@
+unique_name: Account
+object_type: dataset
+label: Account
+connection_id: Connection - AdventureWorks2012
+table: dimaccount
+
+columns:
+  - name: accountcodealternatekey
+    data_type: "long"
+  - name: accountdescription
+    data_type: string
+  - name: accountkey
+    data_type: "long"
+  - name: accounttype
+    data_type: string
+  - name: custommemberoptions
+    data_type: string
+  - name: custommembers
+    data_type: string
+  - name: operator
+    data_type: string
+  - name: parentaccountcodealternatekey
+    data_type: "long"
+  - name: parentaccountkey
+    data_type: "long"
+  - name: valuetype
+    data_type: string
