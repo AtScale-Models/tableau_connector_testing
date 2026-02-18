@@ -8,7 +8,7 @@ hierarchies:
       - unique_name: Customer Name
 level_attributes:
   - unique_name: Customer Name
-    label: Customer
+    label: Customer Name
     contains_unique_names: false
     dataset: fk_dimcustomer
     is_unique_key: true
