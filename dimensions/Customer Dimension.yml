@@ -16,4 +16,16 @@ level_attributes:
       - customerid
     name_column: customername
     sort_column: customername
+relationships:
+  - unique_name: fk_dimcustomer_cityid_to_Geography_City
+    from:
+      dataset: fk_dimcustomer
+      hierarchy: Customer Hierarchy
+      join_columns:
+        - cityid
+      level: Customer Name
+    to:
+      dimension: Geography
+      level: City
+    type: embedded
 type: standard

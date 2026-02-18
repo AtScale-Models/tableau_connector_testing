@@ -1,0 +1,12 @@
+unique_name: fk_dimcity
+object_type: dataset
+label: fk_dimcity
+columns:
+  - name: cityid
+    data_type: int
+  - name: cityname
+    data_type: string
+  - name: stateid
+    data_type: int
+connection_id: Connection - Tableau Testing
+table: fk_dimcity

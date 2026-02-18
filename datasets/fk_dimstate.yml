@@ -1,0 +1,12 @@
+unique_name: fk_dimstate
+object_type: dataset
+label: fk_dimstate
+columns:
+  - name: stateid
+    data_type: int
+  - name: statename
+    data_type: string
+  - name: regionid
+    data_type: int
+connection_id: Connection - Tableau Testing
+table: fk_dimstate

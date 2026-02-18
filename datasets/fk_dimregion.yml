@@ -1,0 +1,10 @@
+unique_name: fk_dimregion
+object_type: dataset
+label: fk_dimregion
+columns:
+  - name: regionid
+    data_type: int
+  - name: regionname
+    data_type: string
+connection_id: Connection - Tableau Testing
+table: fk_dimregion

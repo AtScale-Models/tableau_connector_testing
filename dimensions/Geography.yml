@@ -1,0 +1,53 @@
+unique_name: Geography
+object_type: dimension
+label: Geography
+hierarchies:
+  - unique_name: Geography Hierarchy
+    label: Geography Hierarchy
+    levels:
+      - unique_name: Region
+      - unique_name: State
+      - unique_name: City
+level_attributes:
+  - unique_name: City
+    label: City
+    contains_unique_names: false
+    dataset: fk_dimcity
+    is_unique_key: true
+    key_columns:
+      - cityid
+    name_column: cityname
+  - unique_name: State
+    label: State
+    contains_unique_names: false
+    dataset: fk_dimstate
+    is_unique_key: true
+    key_columns:
+      - stateid
+    name_column: statename
+    sort_column: statename
+  - unique_name: Region
+    label: Region
+    contains_unique_names: false
+    dataset: fk_dimregion
+    is_unique_key: true
+    key_columns:
+      - regionid
+    name_column: regionname
+    sort_column: regionname
+relationships:
+  - from:
+      dataset: fk_dimcity
+      join_columns:
+        - stateid
+    to:
+      level: State
+    type: snowflake
+  - from:
+      dataset: fk_dimstate
+      join_columns:
+        - regionid
+    to:
+      level: Region
+    type: snowflake
+type: standard
