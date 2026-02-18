@@ -1,0 +1,18 @@
+unique_name: Product Dimension
+object_type: dimension
+label: Product Dimension
+hierarchies:
+  - unique_name: Product Hierarchy
+    label: Product Hierarchy
+    levels:
+      - unique_name: Product
+level_attributes:
+  - unique_name: Product
+    label: Product
+    contains_unique_names: false
+    dataset: fk_dimproduct
+    is_unique_key: true
+    key_columns:
+      - productid
+    name_column: productname
+type: standard

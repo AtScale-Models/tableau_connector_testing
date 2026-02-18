@@ -1,4 +1,4 @@
-unique_name: fk_dimcustomer_dimension
+unique_name: Customer Dimension
 object_type: dimension
 label: Customer
 hierarchies:

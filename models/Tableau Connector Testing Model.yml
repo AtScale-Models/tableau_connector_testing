@@ -20,5 +20,13 @@ relationships:
       join_columns:
         - customerid
     to:
-      dimension: fk_dimcustomer_dimension
+      dimension: Customer Dimension
       level: Customer Name
+  - unique_name: fk_orderfact_productid_to_Product Dimension_Product
+    from:
+      dataset: fk_orderfact
+      join_columns:
+        - productid
+    to:
+      dimension: Product Dimension
+      level: Product
